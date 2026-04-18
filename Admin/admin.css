@@ -1,0 +1,70 @@
+﻿.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.dash-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    box-shadow: 0 4px 6px rgba(204, 0, 0, 0.08); /* Subtle red shadow */
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+    border: 1px solid #ffe6e6;
+}
+
+    .dash-item:hover {
+        transform: translateY(-5px);
+        border-bottom-color: #cc0000; /* Red bottom border on hover */
+    }
+
+    .dash-item i {
+        font-size: 2.5rem;
+        color: #cc0000; /* Red icons */
+        margin-bottom: 15px;
+        display: block;
+    }
+
+.admin-container {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .admin-table th, .admin-table td {
+        border: 1px solid #ffcccc; /* Light red borders */
+        padding: 8px;
+        text-align: left;
+    }
+
+    .admin-table th {
+        background-color: #fff0f0; /* Very light red for headers */
+        color: #cc0000;
+    }
+
+.admin-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+.admin-btn-danger {
+    background-color: #cc0000; /* Primary Red */
+}
+
+/* Success color changed to a dark gray/black to stick strictly to red/white/neutral */
+.admin-btn-success {
+    background-color: #333333;
+}

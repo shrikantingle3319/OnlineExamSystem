@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="OnlineExamSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Online Exam System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Styles.css" rel="stylesheet" runat="server" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div class="brand"><i class="fa-solid fa-graduation-cap"></i> ExamPortal</div>
+            <div>
+                <% if (Session["UserID"] != null) { %>
+                    <span><i class="fa-regular fa-user"></i> <%= Session["UserName"] %></span>
+                    <asp:LinkButton ID="btnHome" runat="server" OnClick="btnHome_Click" CssClass="nav-link"><i class="fa-solid fa-gauge"></i> Dashboard</asp:LinkButton>
+                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" CssClass="btn btn-danger btn-sm"><i class="fa-solid fa-right-from-bracket"></i> Logout</asp:LinkButton>
+                <% } %>
+            </div>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

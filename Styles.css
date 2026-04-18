@@ -1,0 +1,212 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #cc0000; /* Strong Red */
+    --primary-dark: #990000; /* Darker Red for hovers */
+    --secondary: #666666; /* Neutral gray for secondary text */
+    --success: #333333; /* Converted to dark gray to keep red/white theme intact */
+    --danger: #ff3333; /* Bright red for errors */
+    --light: #fff5f5; /* Very pale red/white */
+    --dark: #1a1a1a; /* Almost black for text */
+    --white: #ffffff; /* Pure White */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white); /* Changed to pure white */
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(204, 0, 0, 0.1); /* Red-tinted shadow */
+    border-bottom: 2px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+    .navbar .brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+.nav-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .nav-link:hover {
+        color: var(--primary);
+    }
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.col-40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.col-60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.col-100 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(204, 0, 0, 0.08);
+    border: 1px solid #ffcccc; /* Added border since background is white */
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: var(--white);
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+    }
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-dark);
+    }
+
+.btn-danger {
+    background-color: var(--danger);
+}
+
+    .btn-danger:hover {
+        background-color: #cc0000;
+    }
+
+.btn-success {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+    .btn-success:hover {
+        background-color: var(--dark);
+    }
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #ffcccc;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    min-width: 600px;
+}
+
+    .table th, .table td {
+        padding: 15px;
+        border-top: 1px solid #fff0f0;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: var(--light);
+        color: var(--primary);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
+.msg-error {
+    color: var(--danger);
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+.msg-success {
+    color: var(--primary); /* Success text matched to primary theme */
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .col-40, .col-60 {
+        flex: 0 0 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

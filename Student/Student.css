@@ -1,0 +1,34 @@
+﻿.exam-header {
+    display: flex;
+    justify-content: space-between;
+    background: #cc0000; /* Red background */
+    color: #ffffff; /* White text */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.q-block {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #cc0000; /* Red left border */
+    box-shadow: 0 2px 4px rgba(204, 0, 0, 0.08);
+    border-top: 1px solid #ffe6e6;
+    border-right: 1px solid #ffe6e6;
+    border-bottom: 1px solid #ffe6e6;
+}
+
+.score-box {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 2px dashed #ffcccc;
+    border-radius: 8px;
+}
+
+.score-val {
+    font-size: 3rem;
+    color: #cc0000; /* Red score value */
+    font-weight: bold;
+}
